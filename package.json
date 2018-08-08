@@ -1,0 +1,27 @@
+{
+  "name": "core-registro-visitantes",
+  "version": "0.1.0",
+  "description": "visitor register",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Copelia/core-registro-visitantes.git"
+  },
+  "keywords": [
+    "firebase",
+    "ecs6",
+    "npm"
+  ],
+  "author": "Miriam Copelia Samantha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Copelia/core-registro-visitantes/issues"
+  },
+  "homepage": "https://github.com/Copelia/core-registro-visitantes#readme"
+}
