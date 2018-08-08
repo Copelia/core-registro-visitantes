@@ -1,6 +1,6 @@
 # Registro de Visitantes
 
-* Historias de usuario
+## Historias de usuario
 
 - Visitante
 
