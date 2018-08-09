@@ -6,8 +6,8 @@ let db = firebase.firestore();
 //Registrando al visitante en la base de datos
 
   document.getElementById('register-visitor').addEventListener('click', (event) => {
-    let visitorName = document.getElementById("name").value;
-    let issueVisitor = document.getElementById("issue").value;
+    let visitorName = document.getElementById("icon_prefix").value;
+    let issueVisitor = document.getElementById("icon_telephone").value;
 
     db.collection('visitors').add({
       Visitante : visitorName,
