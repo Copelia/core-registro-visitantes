@@ -11,7 +11,7 @@
   firebase.initializeApp(config);
 
 
-window.registerVisitor = () => {
+window.registerVisitor = () => { // Obteniendo datos del usuario
     let email = document.getElementById("email").value;
     let pass = document.getElementById("contraseña").value;
    
@@ -57,7 +57,7 @@ window.registerVisitor = () => {
   }
   observer();
 
-  window.logOut = () => {
+  window.logOut = () => { //Salir de la app
     firebase.auth().signOut()
     .then(function(){
        console.log("Saliendo...");
