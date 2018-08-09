@@ -7,25 +7,53 @@
     <title>Registro de visitantes </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/main.css">
     <!--<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /> -->
 
 
 </head>
 
 <body>
+    <div class="container">
+        <h3 class="black-text text-darken-2 center-align">Bienvenido</h3>
+        <hr>
+        <h1 class="black-text text-darken-2 center-align">TERMINAL 1</h1>
 
-    <h4>Registro de Visitantes</h4>
-    <input id="email" type="email" placeholder="E-mail">
-    <input id="contraseña" type="password" placeholder="Contraseña">
+        <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="icon_telephone" type="tel" class="validate">
+                      <label for="icon_telephone">Apellido</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+    
+        
 
-    <button onclick="registerVisitor()">Enviar</button>
+    
 
-    <div id="contenido"></div>
+    
+        <!-- <h4 class="center-align">Registro de Visitantes</h4>
+        <input class="left-align" id="email" type="email" placeholder="E-mail">
+        <input class="btn" class="left-align" id="contraseña" type="password" placeholder="Contraseña"> -->
+
+        <button class="btn" id="enviar" class="center waves-effect waves-light btn" onclick="registerVisitor()">Enviar</button>
+
+        <div id="contenido"></div>
 
 
-<video id="video"></video>
-<button id="startbutton">Capturar</button>
-<canvas id="canvas"></canvas>
+        <video id="video"></video>
+        <button class="btn" class="center waves-effect waves-light btn" id="startbutton">Capturar</button>
+        <canvas id="canvas"></canvas>
+        </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
