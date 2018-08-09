@@ -14,23 +14,20 @@
 <body>
 
     <h4>Registro de Visitantes</h4>
-    <input id="email" type="email" placeholder="E-mail">
-    <input id="contraseña" type="password" placeholder="Contraseña">
+    <input id="name" type="name" placeholder="Nombre y apellido">
+    <input id="issue" type="name" placeholder="Motivo de visita">
 
-    <button onclick="registerVisitor()">Enviar</button>
-
-    <div id="contenido"></div>
-
-
-<video id="video"></video>
-<button id="startbutton">Capturar</button>
-<canvas id="canvas"></canvas>
+    <video id="video"></video>
+    <button id="startbutton">Capturar</button>
+    <canvas id="canvas"></canvas>
+    <button id="register-visitor">Enviar</button>
 
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="src/js/data.js"></script>
+    <script src="src/js/main.js"></script>
 
-
-    <!--<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>-->
-    <script src="src/main.js"></script>
 </body>
 
 </html>
