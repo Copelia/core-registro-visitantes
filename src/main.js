@@ -1,4 +1,3 @@
-
 window.initFirebase();
 
 let db = firebase.firestore();
@@ -19,9 +18,9 @@ let db = firebase.firestore();
       console.error('Error adding document: ', error);
     });
   });
+  
 
-
-//Tomando foto
+//Tomando foto    
 
 (function() {
 
