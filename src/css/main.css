@@ -1,0 +1,26 @@
+body{
+    background-color: #D8DCDB;
+}
+
+
+.btn{
+    background-color: grey;
+    color: #D8DCD8;
+}
+
+/* #enviar{
+    margin-left: 30%;
+
+} */
+
+#video{
+    width: 50%;
+    height: 50%;
+    border-radius: 40%;
+}
+
+#canvas{
+    width: 50%;
+    height: 50%;
+    border-radius: 40px;
+}
