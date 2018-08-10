@@ -5,15 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Selecciona</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
     <div>
-        <select name="hosts-list" class="host-name">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
+        <h2>A quién visitas hoy?</h2>
+    </div>
+    <div class="selector">
+        <select name="hosts-list" class="host-name" id="trigger-alert">
+            <option value="">Selecciona anfitrión …</option>
+            <option value="Laura">Laura Ruiz</option>
+            <option value="Jimena">Jimena Sánchez</option>
+            <option value="Juan">Juan Carlos Bodoque</option>
+            <option value="Carlos">Carlos Benítez</option>
         </select>
     </div>
+
+    <script src="js/select.js"></script>
 </body>
 </html>

@@ -5,19 +5,29 @@ let db = firebase.firestore();
 
 //Registrando al visitante en la base de datos
 
+let visitorName = document.getElementById("icon_prefix").value;
+let issueVisitor = document.getElementById("icon_telephone").value;
+let yearDateTime = firebase.firestore.FieldValue.serverTimestamp();
+
   document.getElementById('register-visitor').addEventListener('click', (event) => {
-    let visitorName = document.getElementById("icon_prefix").value;
-    let issueVisitor = document.getElementById("icon_telephone").value;
+    //Hacer que este if funcione
+    if (visitorName.value === ""  || issueVisitor.value === "") {
+      alert('No puedes continuar sin haber ingresado tus datos')
+    } else {
 
     db.collection('visitors').add({
       Visitante : visitorName,
-      Asunto : issueVisitor
+      Asunto : issueVisitor,
+      fechaYhora : yearDateTime
     }).then((docRef) => {
       console.log('Document written with ID: ', docRef.id);
     })
     .catch((error) => {
       console.error('Error adding document: ', error);
     });
+  }
+   
+    location.href = 'src/select.html';
   });
 
 //Tomando foto    
