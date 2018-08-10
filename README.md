@@ -12,3 +12,8 @@ Yo como usuaria de WeWork quiero notificar a la persona visitada de mi llegada.
 
 Yo como usuario administrador quiero visualizar la data de los visitantes, incluyendo la fecha y hora de registro de cada uno
 
+## Sketch de baja fidelidad
+
+![](ux/bajafid.jpg)
+![](ux/sketchbaja.jpg)
+
