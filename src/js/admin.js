@@ -58,7 +58,7 @@ const register = () => {
      firebase.auth().signOut()
      .then(function(){
         console.log("Saliendo...");
-        location.href = '../index.html';
+        location.href = '../views/home.html';
      })
      .catch(function (error){
        console.log(error);
