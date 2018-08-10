@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded',function() {
 },false);
 
 function changeEventHandler(event) {
-    if(!event.target.value) alert('Por favor, selecciona a un anfitrión');
+    if(!event.target.value) alert('Por favor, selecciona a un anfitrión'); 
     else alert('Bienvenidx, se ha notificado a ' + event.target.value + ' que estás aquí.'); 
+         location.href = '../index.html';
 }
