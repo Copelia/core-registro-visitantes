@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/main.css">
-
-
+    <link rel="stylesheet" href="../css/main.css">
 </head>
-
 <body>
+    
     <div class="container">
-        <h3 class="black-text text-darken-2 center-align">Bienvenido</h3>
-        <hr>
-        <h1 class="black-text text-darken-2 center-align">TERMINAL 1</h1>
+        <h3 id="welcome">Bienvenido a</h3>
+        <h1>Terminal 1</h1>
 
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input name= "nombre" id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Nombre</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input name="motivo" id="icon_telephone" type="text" class="validate">
-                        <label for="icon_telephone">Motivo de visita</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-
+    </div>
+    
 
         <button class="btn center waves-effect waves-light btn" id="register-visitor">Enviar</button>
 
@@ -46,7 +27,6 @@
 
         <a href = "src/admin.html">Eres administrador/a?</a>
 
-        </div>
 
 
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
@@ -58,5 +38,4 @@
 
 
 </body>
-
 </html>
