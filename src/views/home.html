@@ -18,7 +18,8 @@
 
 <body>
         <nav class="navbar navbar-dark bg-dark">
-                <i class="material-icons">navigate_next</i>
+                <a id="register-visitor"><i id="next" class="material-icons">navigate_next</i></a>
+                
               </nav>
     <div id="wlcm" class="row">
         <div class="container">
@@ -26,33 +27,29 @@
             <div id="horizontal3"></div>
         </div>                
     </div>
-        <div class="row">
+        <div id="userData" class="row">
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <i class="material-icons prefix">account_circle</i>
+                        <i class="material-icons">person_pin</i>
                         <input name= "nombre" id="icon_prefix" type="text" class="validate">
                         <label for="icon_prefix">Nombre</label>
                     </div>
                     <div class="input-field col s6">
+                        <i class="material-icons">sort</i>
                         <input name="motivo" id="icon_telephone" type="text" class="validate">
                         <label for="icon_telephone">Motivo de visita</label>
                     </div>
                 </div>
             </form>
         </div>
+        <section>
+            <video id="player" controls autoplay></video>
+            <button class="btn center waves-effect waves-light btn" id="capture">Capturar</button>
+            <canvas id="snapshot" class="canvas"></canvas>
+        </section>
 
-
-
-        <button class="btn center waves-effect waves-light btn" id="register-visitor">Enviar</button>
-
-        <video id="player" controls autoplay></video>
-        <button class="btn center waves-effect waves-light btn" id="capture">Capturar</button>
-        <canvas id="snapshot" class="canvas"></canvas>
-
-        </div>
-
-
+        
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Pathway+Gothic+One');
 
+
 body{
     background-color: #D8DCDB;
 }
@@ -90,9 +91,26 @@ footer{
     border-top: 4px solid black;
     margin-top: 5px;
     margin-bottom: 5%
-
 }
 
+#userData{
+    margin-left: 1%;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow 1px 1px #231F20;
+    text-align: center;
+    display: inline;
+}
+
+#register-visitor{
+    color: whitesmoke;
+}
+
+#next{
+    align: right;
+    margin-left: 2350%;
+    font-size: 30px;
+}
 /*select.html view*/
 
 h2 {/*select h2 (a quién visitas hoy?)*/
