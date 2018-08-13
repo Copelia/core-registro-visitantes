@@ -40,24 +40,24 @@ let snapshotCanvas = document.getElementById('snapshot');
 let captureButton = document.getElementById('capture');
 
   let handleSuccess = (stream) => {
-    // Attach the video stream to the video element and autoplay.
+    //Adjunta stream al elemento video
     player.srcObject = stream;
   };
 
   captureButton.addEventListener('click', () => {
     let context = snapshot.getContext('2d');
-    // Draw the video frame to the canvas.
+    // Tomando frame del video a canvas
     context.drawImage(player, 0, 0, snapshotCanvas.width, 
         snapshotCanvas.height);
-    let canvas = document.getElementById('snapshot');
-    let dataURL = canvas.toDataURL();
+    let dataURL = snapshotCanvas.toDataURL();
     console.log(dataURL);
-
+//Guardando en base de datos 
           // Create a root reference
   let storageRef = firebase.storage().ref();
   //     // Create a reference to 'images/mountains.jpg'
-   var storeImage = storageRef.child('images/foto.jpg');
-   storeImage.putString(dataURL, 'data_url').then(function (snapshot) {
+   var storeImage = storageRef.child('images');
+      console.log(storeImage);
+   storeImage.putString(dataURL, 'data_url').then(function(snapshot) {
     console.log('Uploaded a data_url string!');
    });
 
