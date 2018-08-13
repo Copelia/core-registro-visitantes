@@ -102,6 +102,14 @@ footer{
     display: inline;
 }
 
+#home{
+    font-size: 35px;
+    color: black;
+}
+
+#homeText{
+    font-size: 15px;
+}
 #register-visitor{
     color: whitesmoke;
 }
@@ -111,22 +119,77 @@ footer{
     margin-left: 2350%;
     font-size: 30px;
 }
+
+p{
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+
+}
+
+#capture{
+    margin-left: 45%;
+    background-color: #1a1a1a;
+    /* margin-top: 20%; */
+    color: #a6a6a6;
+    border-color: black;
+    box-shadow: #231F20;
+    font-size: 20px;
+}
+
+#player{
+    margin-left: 33%;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+}
+
+
+#snapshot{
+    margin-left: 33%;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+}
+
+
 /*select.html view*/
 
 h2 {/*select h2 (a quién visitas hoy?)*/
-    font-family: 'Roboto' sans-serif;
     text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 40px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    letter-spacing: 8px;
+    font-weight: bolder;    
 }
 .selector{
+    margin-top: 20%;
     display: inline-block;
-    margin-left: 40%;
-};
-
-.canvas {
-    width: 100%;
-    height: 100%;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
 
+.custom-select{
+    border: grey;
+}
+
+.material-icons{
+    font-size: 50px;
+    left: 50%;
+    color: #D8DCD8;
+}
+
+#next{
+    font-size: 50px;
+    color: #D8DCD8;
+    margin-left: 1300%;
+}
+ 
 .btn{
     background-color: #1a1a1a;
     color: #D8DCD8;
@@ -137,19 +200,5 @@ h2 {/*select h2 (a quién visitas hoy?)*/
 
 } */
 
-#player{
-    width: 20%;
-    height: 30%;
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-}
 
-#snapshot{
-    width: 50%;
-    height: 50%;
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-}
 

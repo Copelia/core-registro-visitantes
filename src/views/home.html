@@ -20,7 +20,7 @@
         <nav class="navbar navbar-dark bg-dark">
                 <a id="register-visitor"><i id="next" class="material-icons">navigate_next</i></a>
                 
-              </nav>
+        </nav>
     <div id="wlcm" class="row">
         <div class="container">
             <h3>BIENVENIDO</h3>
@@ -31,22 +31,25 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <i class="material-icons">person_pin</i>
+                        <i id="home" class="material-icons">person_pin</i>
                         <input name= "nombre" id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Nombre</label>
+                        <label class="homeText" for="icon_prefix">Nombre</label>
                     </div>
                     <div class="input-field col s6">
-                        <i class="material-icons">sort</i>
+                        <i id="home" class="material-icons">sort</i>
                         <input name="motivo" id="icon_telephone" type="text" class="validate">
-                        <label for="icon_telephone">Motivo de visita</label>
+                        <label class="homeText" for="icon_telephone">Motivo de visita</label>
                     </div>
                 </div>
             </form>
         </div>
-        <section>
-            <video id="player" controls autoplay></video>
-            <button class="btn center waves-effect waves-light btn" id="capture">Capturar</button>
-            <canvas id="snapshot" class="canvas"></canvas>
+        <section id="video">
+            <p>Por motivos de seguridad se te tomará un foto</p>
+            <p>¡Sonrie!</p>
+            <button id="capture">Capturar</button>
+
+            <video id="player" autoplay></video>
+            <canvas id="snapshot" ></canvas>                      
         </section>
 
         

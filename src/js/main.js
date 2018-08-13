@@ -55,11 +55,11 @@ let captureButton = document.getElementById('capture');
     let dataURL = (snapshot.toDataURL());
     console.log(dataURL);
 //Saving snapshot on database
-db.collection('visitors').add({
+db.collection('pictures').add({
   Foto : dataURL
 }).then((docRef) => {
   console.log('Document written with ID: ', docRef.id);
-    location.href = 'select.html';
+    // location.href = 'select.html';
 })
 .catch((error) => {
   console.error('Error adding document: ', error);
