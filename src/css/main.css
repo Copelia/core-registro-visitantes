@@ -113,7 +113,8 @@ footer{
 }
 /*select.html view*/
 
-h2 {/*select h2 (a quién visitas hoy?)*/
+h2,
+h3 {/*select h2 (a quién visitas hoy?)*/
     font-family: 'Roboto' sans-serif;
     text-align: center;
 }
@@ -131,6 +132,28 @@ h2 {/*select h2 (a quién visitas hoy?)*/
     background-color: #1a1a1a;
     color: #D8DCD8;
 }
+/* 
+#logout{
+    position: absolute !important; 
+    right: 0 !important;
+} */
+
+.form {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+  }
+
+  .form-control {
+    outline: 0; 
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+  }
 
 /* #enviar{
     margin-left: 30%;

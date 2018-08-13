@@ -10,9 +10,9 @@ window.initFirebase = () => {
 };
 
 
-//Enviando a registro de visitante
-document.getElementById('login').addEventListener('click', (event) => {
-  location.href = 'src/views/home.html';
-})
+// //Enviando a registro de visitante
+// document.getElementById('login').addEventListener('click', (event) => {
+//   location.href = 'src/views/home.html';
+// })
 
 
