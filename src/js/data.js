@@ -14,3 +14,5 @@ window.initFirebase = () => {
 document.getElementById('login').addEventListener('click', (event) => {
   location.href = 'src/views/home.html';
 })
+
+
