@@ -8,3 +8,9 @@ window.initFirebase = () => {
   messagingSenderId: "968340223875"
     });
 };
+
+
+//Enviando a registro de visitante
+document.getElementById('login').addEventListener('click', (event) => {
+  location.href = 'src/views/home.html';
+})

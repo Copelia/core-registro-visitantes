@@ -3,6 +3,8 @@ window.initFirebase();
 
 let db = firebase.firestore();
 
+
+
 //Registrando al visitante en la base de datos
 
   document.getElementById('register-visitor').addEventListener('click', (event) => {
@@ -31,7 +33,6 @@ let db = firebase.firestore();
   });
 
 
-
 //Tomando foto    
 
 let player= document.getElementById('player'); 
@@ -40,7 +41,7 @@ let captureButton = document.getElementById('capture');
 
   let handleSuccess = (stream) => {
     // Attach the video stream to the video element and autoplay.
-    video.srcObject = stream;
+    player.srcObject = stream;
   };
 
   captureButton.addEventListener('click', () => {
