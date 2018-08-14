@@ -166,16 +166,9 @@ h2 {/*select h2 (a quién visitas hoy?)*/
     margin-top: 5%;
     margin-bottom: 10%;
     letter-spacing: 8px;
-    font-weight: bolder;    
+    font-weight: bolder;
 }
-    text-align: center;
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 40px;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    letter-spacing: 8px;
-    font-weight: bolder;    
-}
+
 .selector{
     margin-top: 20%;
     display: inline-block;
