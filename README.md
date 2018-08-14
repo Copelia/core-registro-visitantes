@@ -110,3 +110,28 @@ Se utilizaron íconos de flechas para realizar el cambio de pantalla, los usuari
 ![](ux/bajafid.jpg)
 ![](ux/sketchbaja.jpg)
 
+
+
+## Instalación y Detalles de uso
+
+Para poder utilizar esta aplicación, es necesario.
+
+* Tener un dispositivo móvil o desktop con acceso a Internet.
+
+* Ingresar a la liga 
+
+* Dar click en botón de "Registrarme" en la página de inicio.
+
+* Nota: Si recibe una notificación de permiso de acceso a la cámara, permítalo.
+
+* Llenar dos campos (Nombre y Motivo de visita).
+
+* Capture su fotografía.
+
+* En la parte superior dar click en la flecha ">" para continuar.
+
+* Encontrará una nueva pantalla en donde podrá seleccionar a la persona a visitar.
+
+* De click al nombre de la persona y recibirá una notificación.
+
+* Gracias por usar SAMICO . 
