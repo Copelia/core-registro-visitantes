@@ -48,35 +48,40 @@ function observer() {
 
 
       //Variable para obtener datos de firestore
-      let docRef = db.collection('visitors');
+      let docRef = db.collection("visitors")
+      .orderBy("fechaYhora", "desc")
       //Función de firestore para obtener datos
       docRef.get().then(element => {
         let tabData = '';
+        let fotitos = '';
         element.forEach(visitor => {
           let timeStamp = visitor.data().fechaYhora.seconds;
           let myDate = new Date(timeStamp * 1000);
+          let pic = visitor.data().Foto;
 
           tabData += `<tr>
           <th scope ="row">${visitor.data().Visitante}</th>
           <td>${visitor.data().Asunto}</td>
           <td>${myDate}</td>
         </tr>
+        <img src="${pic}">;
         `;
         });
         container.innerHTML =  tabData  + `<button class="btn btn-secondary" onclick="cerrar()">Log Out</button>`;
+        document.getElementById('myimg').innerHTML = fotitos;
       });
 
-      let picRef = db.collection('pictures');
-  picRef.get().then(perrito => {
-    let fotitos = '';
-    perrito.forEach(picture => {
-      let pic = picture.data().Foto;
-      fotitos += `<img src="${pic}">`;
-     // console.log(fotitos);
-    });
+  //     let picRef = db.collection('pictures');
+  // picRef.get().then(perrito => {
+  //   let fotitos = '';
+  //   perrito.forEach(picture => {
+  //     let pic = picture.data().Foto;
+  //     fotitos += `<img src="${pic}">`;
+  //    // console.log(fotitos);
+  //   });
 
-    document.getElementById('myimg').innerHTML = fotitos;
-  })
+  //   document.getElementById('myimg').innerHTML = fotitos;
+  // })
 
     }
     
