@@ -65,22 +65,24 @@ function observer() {
         });
         container.innerHTML =  tabData  + `<button class="btn btn-secondary" onclick="cerrar()">Log Out</button>`;
       });
-    }
-  });
 
-  
-  //Esta función debería pintar fotos pero no lo hace, tampoco manda error.
-let picRef = db.collection('pictures');
+      let picRef = db.collection('pictures');
   picRef.get().then(perrito => {
-    let img = document.getElementById('myimg');
+    let fotitos = '';
     perrito.forEach(picture => {
       let pic = picture.data().Foto;
-      img += `<img src="${pic}">`;
+      fotitos += `<img src="${pic}">`;
+      console.log(fotitos);
     });
 
-    myimg.innerHTML = img;
+    document.getElementById('myimg').innerHTML = fotitos;
   })
 
+    }
+    
+  });
+  
+  //Esta función debería pintar fotos pero no lo hace, tampoco manda error.
 
 };
 observer();

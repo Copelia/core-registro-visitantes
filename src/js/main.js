@@ -47,32 +47,41 @@ captureButton.addEventListener('click', () => {
   // Saving a frame from video stream
   context.drawImage(player, 0, 0, snapshotCanvas.width,
     snapshotCanvas.height);
-  // let snapshotDate = (snapshotCanvas + '-' + new Date())    
-  // console.log(snapshotDate);
+  let date = new Date();
+  let timeStamp = Date.parse(date);
+  //console.log(timeStamp);
   let dataURL = (snapshot.toDataURL());
-  console.log(dataURL);
-  //Saving snapshot on database
-  db.collection('pictures').add({
-    Foto: dataURL
-  }).then((docRef) => {
-    console.log('Document written with ID: ', docRef.id);
-  })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
-    });
+  //console.log(dataURL);
+
+  //Option 1: Saving snapshot on database
+  // db.collection('pictures').add({
+  //   Foto: dataURL
+  // }).then((docRef) => {
+  //   console.log('Document written with ID: ', docRef.id);
+  // })
+  //   .catch((error) => {
+  //     console.error('Error adding document: ', error);
+  //   });
 
 
-  //Saving on firestore storage, this function overwrites last taken picture
+  //Option 2: Saving on firestore storage, this function overwrites last taken picture
   // Create a root reference
-  // let storageRef = firebase.storage().ref();
+  let storageRef = firebase.storage().ref();
   //Create a reference to 'images/name.jpg'
-  //  let storeImage = storageRef.child('images') ;
-  //  storeImage.putString(dataURL, 'data_url').then(function(snapshot) {
-  //   console.log('Uploaded a data_url string!');
-  //  });
+   let storeImage = storageRef.child(`'images/${timeStamp}'`) ;
+   let uploading = storeImage.putString(dataURL, 'data_url').then(function(snapshot) {
+    console.log('Uploaded a data_url string!');
+   }, function () {
+      uploading.snapshot.ref.getDownloadURL().then(downloadURL => {
+        console.log('File available at', downloadURL);
+      })
+    
+   });
 
 });
 
 navigator.mediaDevices.getUserMedia({ video: true })
   .then(handleSuccess);
+
+
 
