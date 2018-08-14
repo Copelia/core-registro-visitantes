@@ -59,7 +59,7 @@ db.collection('pictures').add({
   Foto : dataURL
 }).then((docRef) => {
   console.log('Document written with ID: ', docRef.id);
-    // location.href = 'select.html';
+    //location.href = 'select.html';
 })
 .catch((error) => {
   console.error('Error adding document: ', error);

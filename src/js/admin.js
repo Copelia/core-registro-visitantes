@@ -43,13 +43,28 @@ function observer() {
       let registration = document.getElementById('registration');
       let clean = '';
       registration.innerHTML = clean;
+      document.getElementById('admin-tab').innerHTML = `<h3>Información de visitantes</h3>
+      <div class="table-responsive-sm margin-large-top">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">MOTIVO DE VISITA</th>
+          <th scope="col">FECHA Y HORA DE INGRESO</th>
+        </tr>
+      </thead>
+      <tbody id="resultados">
 
-      
-   
+      </tbody>
+    </table>`;
+
+    const container = document.getElementById('resultados');
+
+
       //Función de firestore para obtener datos
       docRef.get().then(element => {
         let tabData = '';
-        let results = document.getElementById('contenido');
+        //let results = document.getElementById('contenido');
         //let picture = visitor.data().Foto;
 
         element.forEach(visitor => {
@@ -61,34 +76,48 @@ function observer() {
           console.log(myDate);
          
 
-          tabData += `<div>
-          <p>${visitor.data().Visitante}</p>
-          <p>${visitor.data().Asunto}</p>
-          <p>${myDate}</p>
-        </div>
+          tabData += `<tr>
+          <th scope ="row">${visitor.data().Visitante}</th>
+          <td>${visitor.data().Asunto}</td>
+          <td>${myDate}</td>
+        </tr>
         `;
         });
 
-        results.innerHTML = `<h3>Información de visitantes</h3>` + tabData  + `<button class="btn center waves-effect waves-light btn" onclick="cerrar()">Log Out</button>`;
+        container.innerHTML =  tabData  + `<button class="btn btn-secondary" onclick="cerrar()">Log Out</button>`;
 
       });
     }
   });
 
-  let storage = firebase.storage();
-  var pathReference = storage.ref('images');
-  let storageRef = firebase.storage().ref();
+  // let storage = firebase.storage();
+  // var pathReference = storage.ref('images');
+  // let storageRef = firebase.storage().ref();
 
      // `url` is the download URL for 'images/stars.jpg'
     
-  let httpsReference = storage.refFromURL('https://firebasestorage.googleapis.com/v0/b/visitor-register-f8275.appspot.com/o/images?alt=media&token=e2e3446c-f574-460c-a9f0-0e2b90fb2259');
-  storageRef.child('images').getDownloadURL().then(function(url) {
+  // let httpsReference = storage.refFromURL('https://firebasestorage.googleapis.com/v0/b/visitor-register-f8275.appspot.com/o/images?alt=media&token=e2e3446c-f574-460c-a9f0-0e2b90fb2259');
+  // storageRef.child('images').getDownloadURL().then(function(url) {
+  //   let img = document.getElementById('myimg');
+  //   img.src = url;
+  // }).catch(function(error) {
+  //   console.log('Oooops');
+  //   // Handle any errors
+  // });
+  
+  //Esta función debería pintar fotos pero no lo hace, tampoco manda error.
+let picRef = db.collection('pictures');
+  picRef.get().then(perrito => {
     let img = document.getElementById('myimg');
-    img.src = url;
-  }).catch(function(error) {
-    console.log('Oooops');
-    // Handle any errors
-  });
+    perrito.forEach(picture => {
+      let pic = picture.data().Foto;
+      img += `<img src="${pic}">`;
+    });
+
+    myimg.innerHTML = img;
+  })
+
+
 };
 observer();
 
