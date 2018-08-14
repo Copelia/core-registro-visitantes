@@ -72,7 +72,7 @@ function observer() {
     perrito.forEach(picture => {
       let pic = picture.data().Foto;
       fotitos += `<img src="${pic}">`;
-      console.log(fotitos);
+     // console.log(fotitos);
     });
 
     document.getElementById('myimg').innerHTML = fotitos;
