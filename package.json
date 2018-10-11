@@ -28,5 +28,8 @@
   "homepage": "https://github.com/Copelia/core-registro-visitantes#readme",
   "devDependencies": {
     "jest": "^23.4.2"
+  },
+  "dependencies": {
+    "eslint": "^5.4.0"
   }
 }

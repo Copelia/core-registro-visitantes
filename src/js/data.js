@@ -9,10 +9,18 @@ window.initFirebase = () => {
     });
 };
 
-
+const hideView = () =>{
+  document.getElementById('admin-view').style.display = 'none';
+}
 //Enviando a registro de visitante
 document.getElementById('login').addEventListener('click', (event) => {
   location.href = 'src/views/home.html';
+})
+
+document.getElementById('admin-event').addEventListener
+('click', (event) => {
+  document.getElementById('admin-view').style.display = 'block';
+  document.getElementById('welcome-view').style.display = 'none';
 })
 
 
