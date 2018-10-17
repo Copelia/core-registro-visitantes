@@ -1,10 +1,9 @@
 window.initFirebase();
 let db = firebase.firestore();
-let dbSettings = { timestampsInSnapshots: true };
-db.settings(dbSettings);
+// let dbSettings = { timestampsInSnapshots: true };
+// db.settings(credentials);
 
-
-const login = () => {
+function login () {
   let email = document.getElementById("email").value;
   let pass = document.getElementById("contraseña").value;
 
@@ -21,9 +20,7 @@ const login = () => {
 
 function observer() {
   firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-     
-       
+    if (user) {  
       //Acomodando DOM para tabla dinámica
       let registration = document.getElementById('registration');
       let clean = '';
@@ -45,8 +42,6 @@ function observer() {
 
     let container = document.getElementById('resultados'); 
       
-
-
       //Variable para obtener datos de firestore
       let docRef = db.collection("visitors")
       .orderBy("fechaYhora", "desc")
@@ -95,7 +90,11 @@ observer();
 function cerrar() {
   firebase.auth().signOut()
     .then(function () {
-      location.href = '../../index.html';
+      let clean = '';
+      let adminView = document.getElementById('admin-view');
+      adminView.innerHTML = clean;
+      location.href = '#';
+      document.getElementById('welcome-view').style.display = 'block';
     })
     .catch(function (error) {
       console.log(error);
