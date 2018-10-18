@@ -9,7 +9,7 @@ window.initFirebase = () => {
     });
 };
 
-const hideView = () =>{
+const hideView = () => {
   document.getElementById('admin-view').style.display = 'none';
 }
 //Enviando a registro de visitante
