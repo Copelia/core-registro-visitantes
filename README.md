@@ -1,4 +1,5 @@
 # Registro de Visitantes
+![registro](https://user-images.githubusercontent.com/39315448/49194373-7622ff00-f348-11e8-9258-6128887649b8.JPG)
 
 ![Terminal1](https://github.com/Copelia/core-registro-visitantes/blob/master/ux/img/terminal1.png)
 
