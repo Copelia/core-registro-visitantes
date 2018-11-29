@@ -1,4 +1,7 @@
 # Registro de Visitantes
+
+Con esta plataforma se podrá realizar el registro de visitantes de manera ágil y con un ahorro de recursos para el coworking.
+
 ![registro](https://user-images.githubusercontent.com/39315448/49194373-7622ff00-f348-11e8-9258-6128887649b8.JPG)
 
 ![Terminal1](https://github.com/Copelia/core-registro-visitantes/blob/master/ux/img/terminal1.png)
